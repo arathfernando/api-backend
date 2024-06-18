@@ -1,0 +1,325 @@
+<!-- THIS EMAIL WAS BUILT AND TESTED WITH LITMUS http://litmus.com -->
+<!-- IT WAS RELEASED UNDER THE MIT LICENSE https://opensource.org/licenses/MIT -->
+<!-- QUESTIONS? TWEET US @LITMUSAPP -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+      /* FONTS */
+      @import url(https://fonts.googleapis.com/css?family=Poppins);
+      /* @media screen {
+        @font-face {
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 400;
+          src: local("Lato Regular"), local("Lato-Regular"),
+            url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff)
+              format("woff");
+        }
+
+        @font-face {
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 700;
+          src: local("Lato Bold"), local("Lato-Bold"),
+            url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff)
+              format("woff");
+        }
+
+        @font-face {
+          font-family: "Lato";
+          font-style: italic;
+          font-weight: 400;
+          src: local("Lato Italic"), local("Lato-Italic"),
+            url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff)
+              format("woff");
+        }
+
+        @font-face {
+          font-family: "Lato";
+          font-style: italic;
+          font-weight: 700;
+          src: local("Lato Bold Italic"), local("Lato-BoldItalic"),
+            url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff)
+              format("woff");
+        } 
+      }*/
+
+      /* CLIENT-SPECIFIC STYLES */
+      body {
+        font-family: Poppins;
+      }
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      /* .bgimg {
+        background-image: url(https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/emails/ribbon.png);
+        background-size: cover;
+      } */
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 32px !important;
+          line-height: 32px !important;
+        }
+      }
+
+      /* ANDROID CENTER FIX */
+      div[style*='margin: 16px 0;'] {
+        margin: 0 !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #f0f0f0;
+      margin: 0 !important;
+      padding: 0 !important;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="min-height: 100vh; max-width: 600px; margin: auto"
+    >
+      <!-- LOGO -->
+      <tr>
+        <td align="center">
+          <!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+            bgcolor="#333"
+          >
+            <tr>
+              <td align="center" valign="top" style="padding: 22px 10px">
+                <a href="https://hubbers.io/" target="_blank">
+                  <img
+                    src="data:image/svg+xml;charset=UTF-8,%3csvg width='93' height='32' viewBox='0 0 93 32' fill='none' xmlns='http://www.w3.org/2000/svg' %3e%3cpath d='M13.1989 23.5241V30.8404H9.45593V24.0924C9.45593 22.018 8.49608 21.0763 6.84046 21.0763C5.04023 21.0763 3.74507 22.1695 3.74507 24.5198V30.8404H0V13.2081L3.74507 12.4634V19.3836C4.75102 18.3858 6.19288 17.863 7.8485 17.863C10.8957 17.863 13.1989 19.62 13.1989 23.5178' fill='white' /%3e%3cpath d='M27.7223 18.0601V30.8383H24.17V29.3199C23.6656 29.8729 23.0464 30.3114 22.3548 30.6054C21.6631 30.8994 20.9154 31.0418 20.163 31.023C16.923 31.023 14.6428 29.2182 14.6428 25.2748V18.0601H18.3858V24.7334C18.3858 26.8721 19.3477 27.8222 21.0034 27.8222C22.7302 27.8222 23.9793 26.729 23.9793 24.3787V18.0601H27.7223Z' fill='white' /%3e%3cpath d='M43.3963 24.4494C43.3963 28.4634 40.5901 31.0294 36.9645 31.0294C35.2377 31.0294 33.8461 30.4839 32.9093 29.3699V30.8427H29.334V7.68832L33.077 6.98096V19.4066C34.0389 18.3694 35.3571 17.8632 36.9645 17.8632C40.5901 17.8632 43.3963 20.4293 43.3963 24.4432V24.4494ZM39.6052 24.4432C39.6052 22.234 38.1884 20.9043 36.317 20.9043C34.4455 20.9043 33.0309 22.2402 33.0309 24.4494C33.0309 26.6587 34.4455 27.9884 36.317 27.9884C38.1884 27.9884 39.6052 26.6587 39.6052 24.4494' fill='white' /%3e%3cpath d='M58.5169 24.4493C58.5169 28.4632 55.7086 31.0292 52.0851 31.0292C50.3583 31.0292 48.9646 30.4837 48.0299 29.3697V30.8426H44.4546V4.71346L48.1976 3.97705V19.4064C49.1574 18.3692 50.4777 17.8631 52.0851 17.8631C55.7086 17.8631 58.5169 20.4291 58.5169 24.443V24.4493ZM54.7257 24.443C54.7257 22.2338 53.309 20.9041 51.4375 20.9041C49.5661 20.9041 48.1494 22.2338 48.1494 24.443C48.1494 26.6523 49.5661 27.982 51.4375 27.982C53.309 27.982 54.7257 26.6523 54.7257 24.443Z' fill='white' /%3e%3cpath d='M69.7459 26.8243L71.7389 28.963C70.538 30.3176 68.7378 31.0374 66.4116 31.0374C61.9477 31.0374 59.043 28.2577 59.043 24.4574C59.043 20.6571 61.977 17.8774 65.9589 17.8774C69.6075 17.8774 72.6065 20.2526 72.6296 24.3392L63.0793 26.1688C63.6305 27.4259 64.8314 28.069 66.5101 28.069C67.8786 28.069 68.8636 27.6541 69.7501 26.8243H69.7459ZM62.7189 24.0695L69.0061 22.8581C68.6456 21.5512 67.5181 20.6717 65.9589 20.6717C64.0874 20.6717 62.7901 21.9163 62.7189 24.0695Z' fill='white' /%3e%3cpath d='M81.2933 17.8691V21.2898C80.9811 21.2649 80.7422 21.2421 80.4551 21.2421C78.3908 21.2421 77.0243 22.3581 77.0243 24.8059V30.8383H73.2688V18.06H76.8462V19.7465C77.7579 18.5018 79.294 17.8691 81.285 17.8691' fill='white' /%3e%3cpath d='M81.3144 29.6517L82.5718 26.9903C83.7244 27.7267 85.4765 28.2349 87.0587 28.2349C88.7877 28.2349 89.4353 27.7827 89.4353 27.0712C89.4353 24.9802 81.635 27.1189 81.635 22.0117C81.635 19.5888 83.8439 17.8774 87.612 17.8774C89.3871 17.8774 91.355 18.2923 92.5789 18.9935L91.3215 21.63C90.1871 20.9959 88.9042 20.6682 87.6015 20.68C85.925 20.68 85.1998 21.2027 85.1998 21.8686C85.1998 24.0529 93.0001 21.9391 93.0001 26.9757C93.0001 29.3509 90.7682 31.0374 86.9058 31.0374C84.722 31.0374 82.5047 30.4441 81.3123 29.66' fill='white' /%3e%3cpath d='M73.2646 2.43364L81.197 0.962891L73.2646 8.77506V2.43364Z' fill='%239EC54C' /%3e%3c/svg%3e"
+                    alt=""
+                  />
+                </a>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+        </td>
+      </tr>
+      <!-- HERO -->
+      <tr>
+        <td bgcolor="#333" align="center">
+          <!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+          <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+        </td>
+      </tr>
+      <!-- COPY BLOCK -->
+      <tr
+        style="vertical-align: top; background-color: #ffffff; height: 100%"
+        bgcolor="#ffffff"
+      >
+        <td bgcolor="#ffffff" align="center">
+          <!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+				<!-- APP STUFF -->
+				<tr>
+					<td style="max-width: 180px; padding: 30px 30px 30px 30px;">
+						<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/app_mockup.png" alt="" style="max-width: 120px">
+					</td>
+					<td bgcolor="#F0F0F0" align="center" width="420"
+						style="padding: 30px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px; width: 420px; max-width: 420px;">
+						<table align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" valign="middle" style="max-width: 420px;" colspan="2">
+									<p style="margin: 0;">Don't have the <a href="https://hubbers.io/hubbers/get-our-app" style="color: #111111; font-weight: 700;">Hubbers mobile APP</a>?<br/><br/>
+										Download it now to participate in Contests, connect with Hubbers community and more.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="middle" style="max-width: 210px;padding: 20px 18px 0 18px;">
+									<a href="https://itunes.apple.com/gb/app/hubbers-hub-of-makers/id1377168527" target="_blank">
+										<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/appstore.png" alt="App Store" style="width: 100%; max-width: 100%;">
+									</a>
+								</td>
+								<td align="center" valign="middle" style="max-width: 210px;padding: 20px 18px 0 18px;">
+									<a href="https://play.google.com/store/apps/details?id=io.hubbers.app" target="_blank">
+										<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/google_plat_store.png" alt="Google Play Store" style="width: 100%; max-width: 100%;">
+									</a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+            bgcolor="#001126"
+          >
+            <tr>
+              <td align="center" style="padding: 26px 10px">
+                <h6
+                  style="
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 16px;
+                  "
+                >
+                  <a
+                    href="https://hubbers.io/desk/dashboard/"
+                    target="_blank"
+                    style="color: #ffffff; text-decoration: none"
+                    >Dashboard</a
+                  >
+                  -
+                  <a
+                    href="https://hubbers.io/desk/profile/"
+                    target="_blank"
+                    style="color: #ffffff; text-decoration: none"
+                    >Profile</a
+                  >
+                  -
+                  <a
+                    href="https://help.hubbers.io/"
+                    target="_blank"
+                    style="color: #ffffff; text-decoration: none"
+                    >Support</a
+                  >
+                </h6>
+                <p
+                  style="
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 0px;
+                  "
+                >
+                  Creatis, 6, avenue d’Archimède
+                </p>
+                <p
+                  style="
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 0px;
+                  "
+                >
+                  02100 Saint-Quentin, France
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

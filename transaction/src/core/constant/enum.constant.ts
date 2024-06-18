@@ -1,0 +1,43 @@
+export enum TRANSACTION_TYPE {
+  HBB = 'HBB',
+  HBS = 'HBS',
+  CURRENCY = 'CURRENCY',
+}
+
+export enum ANALYTICS_TRANSACTION_TYPE {
+  ALL = 'ALL',
+  HBB = 'HBB',
+  HBS = 'HBS',
+  CURRENCY = 'CURRENCY',
+}
+
+export enum TRANSACTION_FOR_TYPE {
+  USER = 'USER',
+  CLAIM_PRIZE = 'CLAIM_PRIZE',
+  COMMUNITY = 'COMMUNITY',
+  PROJECT = 'PROJECT',
+  SERVICE = 'SERVICE',
+  COURSE = 'COURSE',
+  GIG = 'GIG',
+  JOB = 'JOB',
+  AI = 'AI',
+}
+
+export enum TRANSACTION_STATUS {
+  IN_PROCESS = 'IN_PROCESS',
+  DELIVERED = 'DELIVERED',
+  ON_HOLD = 'ON_HOLD',
+}
+
+export enum OPERATION_TYPE {
+  EXCHANGE = 'EXCHANGE',
+  BUY = 'BUY',
+  SELL = 'SELL',
+  TRANSFER = 'TRANSFER',
+}
+
+export enum ASSIGN_SHARE_FILTER {
+  AREA = 'AREA',
+  SUBAREA = 'SUBAREA',
+  USER = 'USER',
+}

@@ -1,0 +1,9 @@
+{
+  "COURSE_NOT_FOUND": "Course does not exists",
+  "COURSE_REACTION_NOT_FOUND": "Course reaction does not exists",
+  "GIG_NOT_FOUND": "Gig does not exists",
+  "GIG_PACKAGE_NOT_FOUND": "Gig package does not exists",
+  "GIG_FAQ_NOT_FOUND": "Gig FAQ does not exists",
+  "GIG_FEEDBACK_NOT_FOUND": "Gig Feedback does not exists",
+  "GIG_GALLERY_NOT_FOUND": "Gig gallery does not exists"
+}

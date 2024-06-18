@@ -1,0 +1,21 @@
+{
+  "INVALID_INVITATION_TOKEN": "Invitation token is invalid",
+  "NO_INVITATION_FOUND": "Invitation not found for this user",
+  "COMMUNITY_NOT_FOUND": "Community not found",
+  "COMMUNITY_ACCESS_DENIED": "Please make sure you have correct access for this operation",
+  "TOPICS_NOT_FOUND": "No Topics found",
+  "ACCESS_DENIED": "You're not authorized to access this route",
+  "GROUP_NOT_FOUND": "Group not found",
+  "EVENT_NOT_FOUND": "Event not found",
+  "POST_NOT_FOUND": "Post not found",
+  "POLL_NOT_FOUND": "Poll not found",
+  "COMMENT_NOT_FOUND": "Comment not found",
+  "COMMUNITY_USER_NOT_FOUND": "Community user not found",
+  "ARTICLE_NOT_FOUND": "Article not found",
+  "LOCATION_POST_NOT_FOUND": "Location post not found",
+  "TIMELINE_POST_NOT_FOUND": "Timeline post not found",
+  "NOT_LIKED_POST": "You've not liked this post",
+  "POLL_OPTION_NOT_FOUND": "Poll Option not found",
+  "RULE_NOT_FOUND": "Rule not found",
+  "COMMUNITY_USER_REQUEST_NOT_FOUND": "Community join request for this user not found"
+}

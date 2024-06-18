@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}A NEW GROUP HAS BEEN CREATED{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0; color: #353434">Dear {{user_name}}!</p>
+		<p></p>
+		<p style="margin: 0; color: #353434">{{group_name}} has been created in {{community_name}} by {{creator}}.</p>
+		<br/>
+		<!-- /link directed to invation box/ -->
+		<p style="margin: 0; color: #353434">Cheers,</p>
+		<p style="margin: 0; color: #353434">The Hubbers Team</p>
+	</td>
+</tr>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block title %}Application for Hubbers “{{title}}” {% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style=" padding: 20px 30px 0px 30px; 
+				color: #666666; 
+				font-family: 'Lato', Helvetica, Arial, sans-serif; 
+				font-size: 18px; 
+				font-weight: 400; 
+				line-height: 25px; 
+				border-left: 1px solid #eee; 
+				border-right: 1px solid #eee;">
+		<p>Dear <b>{{name}}</b></p><br/><br/>
+		<p>we have received your application for <a href="https://hubbers.io/hubbers/hubbers-job-board">“{{title}}”</a>. 
+		</p>
+		<p>
+			We appreciate your interest in Hubbers, the community for creators, experts and investors to launch great products.
+		</p>
+		<p>
+			We try to come back to you soon. If you don’t get answer within 7 days, it means that we have selected someone else but THANK YOU for applying and let’s keep in touch, <br/>cheers, <br/>Hubbers HR team</p>
+		</p>
+	</td>
+</tr>
+{% endblock %}

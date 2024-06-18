@@ -1,0 +1,30 @@
+[submodule "user"]
+	path = user
+	url = https://github.com/hubbersofficial/api-user
+[submodule "admin"]
+	path = admin
+	url = https://github.com/hubbersofficial/api-admin
+[submodule "community"]
+	path = community
+	url = https://github.com/hubbersofficial/api-community
+[submodule "mailer"]
+	path = mailer
+	url = https://github.com/hubbersofficial/api-mailer
+[submodule "master-class"]
+	path = master-class
+	url = https://github.com/hubbersofficial/api-master-class
+[submodule "payment"]
+	path = payment
+	url = https://github.com/hubbersofficial/api-payment
+[submodule "product-launcher"]
+	path = product-launcher
+	url = https://github.com/hubbersofficial/api-product-launcher
+[submodule "socket"]
+	path = socket
+	url = https://github.com/hubbersofficial/api-socket
+[submodule "token"]
+	path = token
+	url = https://github.com/hubbersofficial/api-token
+[submodule "transaction"]
+	path = transaction
+	url = https://github.com/hubbersofficial/api-transaction

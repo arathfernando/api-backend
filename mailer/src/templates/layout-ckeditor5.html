@@ -1,0 +1,714 @@
+<!-- THIS EMAIL WAS BUILT AND TESTED WITH LITMUS http://litmus.com -->
+<!-- IT WAS RELEASED UNDER THE MIT LICENSE https://opensource.org/licenses/MIT -->
+<!-- QUESTIONS? TWEET US @LITMUSAPP -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<style type="text/css">
+		/* FONTS */
+		@media screen {
+			@font-face {
+				font-family: 'Lato';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+			}
+
+			@font-face {
+				font-family: 'Lato';
+				font-style: normal;
+				font-weight: 700;
+				src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+			}
+
+			@font-face {
+				font-family: 'Lato';
+				font-style: italic;
+				font-weight: 400;
+				src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+			}
+
+			@font-face {
+				font-family: 'Lato';
+				font-style: italic;
+				font-weight: 700;
+				src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+			}
+		}
+
+		/* CLIENT-SPECIFIC STYLES */
+		body, table, td, a {
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		}
+
+		table, td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* RESET STYLES */
+		img {
+			border: 0;
+			height: auto;
+			line-height: 100%;
+			outline: none;
+			text-decoration: none;
+		}
+
+		table {
+			border-collapse: collapse !important;
+		}
+
+		body {
+			height: 100% !important;
+			margin: 0 !important;
+			padding: 0 !important;
+			width: 100% !important;
+		}
+		.bgimg{
+			background-image: url(https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/emails/ribbon.png);
+			background-size: cover;
+		}
+
+		/* iOS BLUE LINKS */
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* MOBILE STYLES */
+		@media screen and (max-width: 600px) {
+			h1 {
+				font-size: 32px !important;
+				line-height: 32px !important;
+			}
+		}
+
+		/* ANDROID CENTER FIX */
+		div[style*="margin: 16px 0;"] {
+			margin: 0 !important;
+		}
+
+		/*
+		* CKEditor 5 (v29.2.0) content styles.
+		* Generated on Fri, 17 Sep 2021 10:38:45 GMT.
+		* For more information, check out https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/content-styles.html
+		*/
+
+		:root {
+				--ck-color-image-caption-background: hsl(0, 0%, 97%);
+				--ck-color-image-caption-text: hsl(0, 0%, 20%);
+				--ck-color-mention-background: hsla(341, 100%, 30%, 0.1);
+				--ck-color-mention-text: hsl(341, 100%, 30%);
+				--ck-color-table-caption-background: hsl(0, 0%, 97%);
+				--ck-color-table-caption-text: hsl(0, 0%, 20%);
+				--ck-highlight-marker-blue: hsl(201, 97%, 72%);
+				--ck-highlight-marker-green: hsl(120, 93%, 68%);
+				--ck-highlight-marker-pink: hsl(345, 96%, 73%);
+				--ck-highlight-marker-yellow: hsl(60, 97%, 73%);
+				--ck-highlight-pen-green: hsl(112, 100%, 27%);
+				--ck-highlight-pen-red: hsl(0, 85%, 49%);
+				--ck-image-style-spacing: 1.5em;
+				--ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+				--ck-todo-list-checkmark-size: 16px;
+		}
+
+		/* ckeditor5-image/theme/imagecaption.css */
+		.ck-content .image > figcaption {
+				display: table-caption;
+				caption-side: bottom;
+				word-break: break-word;
+				color: var(--ck-color-image-caption-text);
+				background-color: var(--ck-color-image-caption-background);
+				padding: .6em;
+				font-size: .75em;
+				outline-offset: -1px;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-block-align-left,
+		.ck-content .image-style-block-align-right {
+				max-width: calc(100% - var(--ck-image-style-spacing));
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-align-left,
+		.ck-content .image-style-align-right {
+				clear: none;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-side {
+				float: right;
+				margin-left: var(--ck-image-style-spacing);
+				max-width: 50%;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-align-left {
+				float: left;
+				margin-right: var(--ck-image-style-spacing);
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-align-center {
+				margin-left: auto;
+				margin-right: auto;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-align-right {
+				float: right;
+				margin-left: var(--ck-image-style-spacing);
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-block-align-right {
+				margin-right: 0;
+				margin-left: auto;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-style-block-align-left {
+				margin-left: 0;
+				margin-right: auto;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content p + .image-style-align-left,
+		.ck-content p + .image-style-align-right,
+		.ck-content p + .image-style-side {
+				margin-top: 0;
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-inline.image-style-align-left,
+		.ck-content .image-inline.image-style-align-right {
+				margin-top: var(--ck-inline-image-style-spacing);
+				margin-bottom: var(--ck-inline-image-style-spacing);
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-inline.image-style-align-left {
+				margin-right: var(--ck-inline-image-style-spacing);
+		}
+		/* ckeditor5-image/theme/imagestyle.css */
+		.ck-content .image-inline.image-style-align-right {
+				margin-left: var(--ck-inline-image-style-spacing);
+		}
+		/* ckeditor5-font/theme/fontsize.css */
+		.ck-content .text-tiny {
+				font-size: .7em;
+		}
+		/* ckeditor5-font/theme/fontsize.css */
+		.ck-content .text-small {
+				font-size: .85em;
+		}
+		/* ckeditor5-font/theme/fontsize.css */
+		.ck-content .text-big {
+				font-size: 1.4em;
+		}
+		/* ckeditor5-font/theme/fontsize.css */
+		.ck-content .text-huge {
+				font-size: 1.8em;
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .marker-yellow {
+				background-color: var(--ck-highlight-marker-yellow);
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .marker-green {
+				background-color: var(--ck-highlight-marker-green);
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .marker-pink {
+				background-color: var(--ck-highlight-marker-pink);
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .marker-blue {
+				background-color: var(--ck-highlight-marker-blue);
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .pen-red {
+				color: var(--ck-highlight-pen-red);
+				background-color: transparent;
+		}
+		/* ckeditor5-highlight/theme/highlight.css */
+		.ck-content .pen-green {
+				color: var(--ck-highlight-pen-green);
+				background-color: transparent;
+		}
+		/* ckeditor5-image/theme/image.css */
+		.ck-content .image {
+				display: table;
+				clear: both;
+				text-align: center;
+				margin: 0.9em auto;
+				min-width: 50px;
+		}
+		/* ckeditor5-image/theme/image.css */
+		.ck-content .image img {
+				display: block;
+				margin: 0 auto;
+				max-width: 100%;
+				min-width: 100%;
+		}
+		/* ckeditor5-image/theme/image.css */
+		.ck-content .image-inline {
+				/*
+				* Normally, the .image-inline would have "display: inline-block" and "img { width: 100% }" (to follow the wrapper while resizing).;
+				* Unfortunately, together with "srcset", it gets automatically stretched up to the width of the editing root.
+				* This strange behavior does not happen with inline-flex.
+				*/
+				display: inline-flex;
+				max-width: 100%;
+				align-items: flex-start;
+		}
+		/* ckeditor5-image/theme/image.css */
+		.ck-content .image-inline picture {
+				display: flex;
+		}
+		/* ckeditor5-image/theme/image.css */
+		.ck-content .image-inline picture,
+		.ck-content .image-inline img {
+				flex-grow: 1;
+				flex-shrink: 1;
+				max-width: 100%;
+		}
+		/* ckeditor5-horizontal-line/theme/horizontalline.css */
+		.ck-content hr {
+				margin: 15px 0;
+				height: 4px;
+				background: hsl(0, 0%, 87%);
+				border: 0;
+		}
+		/* ckeditor5-code-block/theme/codeblock.css */
+		.ck-content pre {
+				padding: 1em;
+				color: hsl(0, 0%, 20.8%);
+				background: hsla(0, 0%, 78%, 0.3);
+				border: 1px solid hsl(0, 0%, 77%);
+				border-radius: 2px;
+				text-align: left;
+				direction: ltr;
+				tab-size: 4;
+				white-space: pre-wrap;
+				font-style: normal;
+				min-width: 200px;
+		}
+		/* ckeditor5-code-block/theme/codeblock.css */
+		.ck-content pre code {
+				background: unset;
+				padding: 0;
+				border-radius: 0;
+		}
+		/* ckeditor5-image/theme/imageresize.css */
+		.ck-content .image.image_resized {
+				max-width: 100%;
+				display: block;
+				box-sizing: border-box;
+		}
+		/* ckeditor5-image/theme/imageresize.css */
+		.ck-content .image.image_resized img {
+				width: 100%;
+		}
+		/* ckeditor5-image/theme/imageresize.css */
+		.ck-content .image.image_resized > figcaption {
+				display: block;
+		}
+		/* ckeditor5-basic-styles/theme/code.css */
+		.ck-content code {
+				background-color: hsla(0, 0%, 78%, 0.3);
+				padding: .15em;
+				border-radius: 2px;
+		}
+		/* ckeditor5-block-quote/theme/blockquote.css */
+		.ck-content blockquote {
+				overflow: hidden;
+				padding-right: 1.5em;
+				padding-left: 1.5em;
+				margin-left: 0;
+				margin-right: 0;
+				font-style: italic;
+				border-left: solid 5px hsl(0, 0%, 80%);
+		}
+		/* ckeditor5-block-quote/theme/blockquote.css */
+		.ck-content[dir="rtl"] blockquote {
+				border-left: 0;
+				border-right: solid 5px hsl(0, 0%, 80%);
+		}
+		/* ckeditor5-table/theme/tablecaption.css */
+		.ck-content .table > figcaption {
+				display: table-caption;
+				caption-side: top;
+				word-break: break-word;
+				text-align: center;
+				color: var(--ck-color-table-caption-text);
+				background-color: var(--ck-color-table-caption-background);
+				padding: .6em;
+				font-size: .75em;
+				outline-offset: -1px;
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content .table {
+				margin: 0.9em auto;
+				display: table;
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content .table table {
+				border-collapse: collapse;
+				border-spacing: 0;
+				width: 100%;
+				height: 100%;
+				border: 1px double hsl(0, 0%, 70%);
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content .table table td,
+		.ck-content .table table th {
+				min-width: 2em;
+				padding: .4em;
+				border: 1px solid hsl(0, 0%, 75%);
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content .table table th {
+				font-weight: bold;
+				background: hsla(0, 0%, 0%, 5%);
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content[dir="rtl"] .table th {
+				text-align: right;
+		}
+		/* ckeditor5-table/theme/table.css */
+		.ck-content[dir="ltr"] .table th {
+				text-align: left;
+		}
+		/* ckeditor5-page-break/theme/pagebreak.css */
+		.ck-content .page-break {
+				position: relative;
+				clear: both;
+				padding: 5px 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+		}
+		/* ckeditor5-page-break/theme/pagebreak.css */
+		.ck-content .page-break::after {
+				content: '';
+				position: absolute;
+				border-bottom: 2px dashed hsl(0, 0%, 77%);
+				width: 100%;
+		}
+		/* ckeditor5-page-break/theme/pagebreak.css */
+		.ck-content .page-break__label {
+				position: relative;
+				z-index: 1;
+				padding: .3em .6em;
+				display: block;
+				text-transform: uppercase;
+				border: 1px solid hsl(0, 0%, 77%);
+				border-radius: 2px;
+				font-family: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
+				font-size: 0.75em;
+				font-weight: bold;
+				color: hsl(0, 0%, 20%);
+				background: hsl(0, 0%, 100%);
+				box-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.15);
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+		}
+		/* ckeditor5-media-embed/theme/mediaembed.css */
+		.ck-content .media {
+				clear: both;
+				margin: 0.9em 0;
+				display: block;
+				min-width: 15em;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list {
+				list-style: none;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list li {
+				margin-bottom: 5px;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list li .todo-list {
+				margin-top: 5px;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label > input {
+				-webkit-appearance: none;
+				display: inline-block;
+				position: relative;
+				width: var(--ck-todo-list-checkmark-size);
+				height: var(--ck-todo-list-checkmark-size);
+				vertical-align: middle;
+				border: 0;
+				left: -25px;
+				margin-right: -15px;
+				right: 0;
+				margin-left: 0;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label > input::before {
+				display: block;
+				position: absolute;
+				box-sizing: border-box;
+				content: '';
+				width: 100%;
+				height: 100%;
+				border: 1px solid hsl(0, 0%, 20%);
+				border-radius: 2px;
+				transition: 250ms ease-in-out box-shadow, 250ms ease-in-out background, 250ms ease-in-out border;
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label > input::after {
+				display: block;
+				position: absolute;
+				box-sizing: content-box;
+				pointer-events: none;
+				content: '';
+				left: calc( var(--ck-todo-list-checkmark-size) / 3 );
+				top: calc( var(--ck-todo-list-checkmark-size) / 5.3 );
+				width: calc( var(--ck-todo-list-checkmark-size) / 5.3 );
+				height: calc( var(--ck-todo-list-checkmark-size) / 2.6 );
+				border-style: solid;
+				border-color: transparent;
+				border-width: 0 calc( var(--ck-todo-list-checkmark-size) / 8 ) calc( var(--ck-todo-list-checkmark-size) / 8 ) 0;
+				transform: rotate(45deg);
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label > input[checked]::before {
+				background: hsl(126, 64%, 41%);
+				border-color: hsl(126, 64%, 41%);
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label > input[checked]::after {
+				border-color: hsl(0, 0%, 100%);
+		}
+		/* ckeditor5-list/theme/todolist.css */
+		.ck-content .todo-list .todo-list__label .todo-list__label__description {
+				vertical-align: middle;
+		}
+		/* ckeditor5-language/theme/language.css */
+		.ck-content span[lang] {
+				font-style: italic;
+		}
+		/* ckeditor5-mention/theme/mention.css */
+		.ck-content .mention {
+				background: var(--ck-color-mention-background);
+				color: var(--ck-color-mention-text);
+		}
+		@media print {
+				/* ckeditor5-page-break/theme/pagebreak.css */
+				.ck-content .page-break {
+						padding: 0;
+				}
+				/* ckeditor5-page-break/theme/pagebreak.css */
+				.ck-content .page-break::after {
+						display: none;
+				}
+		}
+	</style>
+</head>
+<body style="background-color: #F0F0F0; margin: 0 !important; padding: 0 !important;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!-- LOGO -->
+	<tr>
+		<td bgcolor="#333" align="center">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+				<tr>
+					<td align="center" valign="top" style="padding: 40px 10px 40px 10px;">
+						<a href="https://hubbers.io/" target="_blank">
+							<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/logos/hubbers-logo.png"
+								 width="160"
+								 style="display: block; width: 160px; max-width: 160px; min-width: 160px; font-family: 'Lato', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;"
+								 border="0">
+						</a>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	<!-- HERO -->
+	<tr>
+		<td bgcolor="#333" align="center" style="padding: 0px 10px 0px 10px;" >
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;" class="bgimg">
+				<tr>
+					<td align="center" valign="top"
+						style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 1.5;">
+						<h1 style="font-size: 25px;font-weight: 800;margin: 0px;color: #fff;">{% block title %}{% endblock %}</h1>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	<!-- COPY BLOCK -->
+	<tr>
+		<td bgcolor="#F0F0F0" align="center" style="padding: 0px 10px 0px 10px;">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+				{% block content %}{% endblock %}
+				<tr>
+					<td align="center" bgcolor="#fff">
+						<hr style="margin: 0 20px; border: 1px solid #f0f0f0">
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#fff" align="center" style="text-align: left;	padding-left: 30px;font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;" >
+						<p style="padding-top: 20px;">Join us on this exciting, creative journey!</p>
+						<p>Hubberliciously, </p>
+						<p>Benjamin</p>
+						<br>
+						<br>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#F0F0F0" align="center" style="padding: 0px 10px 0px 10px;">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+				<!-- APP STUFF -->
+				<tr>
+					<td style="max-width: 180px; padding: 30px 30px 30px 30px;">
+						<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/app_mockup.png" alt="" style="max-width: 120px">
+					</td>
+					<td bgcolor="#F0F0F0" align="center" width="420"
+						style="padding: 30px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px; width: 420px; max-width: 420px;">
+						<table align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" valign="middle" style="max-width: 420px;" colspan="2">
+									<p style="margin: 0;">Don't have the <a href="https://hubbers.io/hubbers/get-our-app" style="color: #111111; font-weight: 700;">Hubbers mobile APP</a>?<br/><br/>
+										Download it now to participate in Contests, connect with Hubbers community and more.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="middle" style="max-width: 210px;padding: 20px 18px 0 18px;">
+									<a href="https://itunes.apple.com/gb/app/hubbers-hub-of-makers/id1377168527" target="_blank">
+										<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/appstore.png" alt="App Store" style="width: 100%; max-width: 100%;">
+									</a>
+								</td>
+								<td align="center" valign="middle" style="max-width: 210px;padding: 20px 18px 0 18px;">
+									<a href="https://play.google.com/store/apps/details?id=io.hubbers.app" target="_blank">
+										<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/misc/google_plat_store.png" alt="Google Play Store" style="width: 100%; max-width: 100%;">
+									</a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#F0F0F0" align="center" style="padding: 0px 10px 0px 10px;">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+				<tr>
+					<td align="center" valign="top" width="600">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+				<!-- NAVIGATION -->
+				<tr>
+					<td bgcolor="#F0F0F0" align="center"
+						style="padding: 30px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
+						<p style="margin: 0;">
+							<a href="https://hubbers.io/desk/dashboard/" target="_blank" style="color: #111111; font-weight: 700;">Dashboard</a>
+							-
+							<a href="https://hubbers.io/desk/profile/" target="_blank" style="color: #111111; font-weight: 700;">Profile</a>
+							-
+							<a href="https://help.hubbers.io/" target="_blank" style="color: #111111; font-weight: 700;">Support</a>
+							-
+							<a href="https://hubbers.io/hubbers/email-settings/{{emailCode}}/{{accessCode}}"
+							   target="_blank" style="color: #111111; font-weight: 700;">Unsubscribe</a>
+						</p>
+					</td>
+				</tr>
+				<!-- PERMISSION REMINDER -->
+				<tr>
+					<td bgcolor="#F0F0F0" align="center"
+						style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
+						<p style="margin: 0;">You're receiving this email because you have signed up for Hubbers at
+							<a href="https://www.hubbers.io" target="_blank" style="color: #111111; font-weight: 700;">hubbers.io</a>
+							or are being invited by someone from who has signed up for Hubbers.</p>
+					</td>
+				</tr>
+				<!-- UNSUBSCRIBE -->
+				<!--<tr>-->
+					<!--<td bgcolor="#F0F0F0" align="center"-->
+						<!--style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">-->
+						<!--<p style="margin: 0;">If these emails get annoying, please feel free to <a-->
+								<!--href="https://hubbers.io/unsubscribe" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.-->
+						<!--</p>-->
+					<!--</td>-->
+				<!--</tr>-->
+				<!-- ADDRESS -->
+				<tr>
+					<td bgcolor="#F0F0F0" align="center"
+						style="padding: 0px 30px 15px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;">
+						<p style="margin: 0;">No.5 17/F Bonham Trad Centre 50 Bonham Strand Sheung Wan, Hong Kong</p>
+					</td>
+				</tr>
+				<!-- LOGO -->
+				<tr>
+					<td bgcolor="#F0F0F0" align="center" style="padding: 0px 30px 30px 30px;">
+						<img src="https://hubbers-hk.oss-cn-hongkong.aliyuncs.com/assets/logos/hubbers-logo-bw.png"/>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

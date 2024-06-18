@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block title %}Verify Your Email!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style=" padding: 20px 30px 0px 30px; 
+				color: #666666; 
+				font-family: 'Lato', Helvetica, Arial, sans-serif; 
+				font-size: 18px; 
+				font-weight: 400; 
+				line-height: 25px; 
+				border-left: 1px solid #eee; 
+				border-right: 1px solid #eee;">
+		<p>Hi <b>{{name}}</b></p>
+		<p>Welcome to hubbers.io</p>
+		<p>You have just created account with {{email}}</p>
+		<p>Verification Code: {{code}}</p>
+		<!-- <p style="text-align: center;"> -->
+			<!-- <a href="http://localhost:3000/auth/confirm-verify-email?email={{id}}" style="text-decoration: none;display: block;width: 120px;margin: auto;background-color: #9fda3f;">Confirm</a> -->
+			<!-- <a href="https://hubbers.io/auth/confirm-verify-email?email={{id}}" style="text-decoration: none;display: block;width: 120px;margin: auto;background-color: #9fda3f;">Confirm</a> -->
+			<!-- <a href="https://hubbers.io/auth/confirm-verify-email?email={{id}}" target="_blank" style="background:#75AC2A;width:65%;font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; letter-spacing: 0.05rem; padding: 15px 25px; border-radius: 2px; border-radius: 5px; display: block;text-transform: uppercase;text-align: center;margin: auto;">Confirm</a> -->
+		<!-- </p> -->
+	</td>
+</tr>
+{% endblock %}

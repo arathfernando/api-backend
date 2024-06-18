@@ -1,0 +1,121 @@
+import { Module } from '@nestjs/common';
+import { CommunityService } from './community.service';
+import { CommunityController } from './community.controller';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ClientsModule, Transport } from '@nestjs/microservices';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { S3Service } from 'src/core/services/s3/s3.service';
+import {
+  Community,
+  CommunityReport,
+  CommunityTopic,
+  CommunityUser,
+  LeaveCommunity,
+  TopicLike,
+  TopicFollow,
+  CommunityEvent,
+  CommunityGroup,
+  GroupUsers,
+  CommunityPost,
+  CommunityTimeline,
+} from 'src/database/entities';
+import { CommunityRequest } from 'src/database/entities/community-request.entity';
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([
+      Community,
+      CommunityTopic,
+      CommunityUser,
+      LeaveCommunity,
+      CommunityReport,
+      TopicLike,
+      CommunityRequest,
+      TopicFollow,
+      CommunityEvent,
+      CommunityGroup,
+      GroupUsers,
+      CommunityPost,
+      CommunityTimeline,
+    ]),
+    ClientsModule.registerAsync([
+      {
+        name: 'ADMIN_SERVICE',
+        imports: [ConfigModule],
+        useFactory: () => ({
+          transport: Transport.RMQ,
+          options: {
+            urls: [process.env.RABBITMQ_URL],
+            queue: process.env.RABBITMQ_ADMIN_QUEUE,
+            queueOptions: {
+              durable: false,
+            },
+          },
+        }),
+        inject: [ConfigService],
+      },
+      {
+        name: 'NOTIFICATION_SERVICE',
+        imports: [ConfigModule],
+        useFactory: () => ({
+          transport: Transport.RMQ,
+          options: {
+            urls: [process.env.RABBITMQ_URL],
+            queue: process.env.RABBITMQ_NOTIFICATION_QUEUE,
+            queueOptions: {
+              durable: false,
+            },
+          },
+        }),
+        inject: [ConfigService],
+      },
+      {
+        name: 'USER_SERVICE',
+        imports: [ConfigModule],
+        useFactory: () => ({
+          transport: Transport.RMQ,
+          options: {
+            urls: [process.env.RABBITMQ_URL],
+            queue: process.env.RABBITMQ_USER_QUEUE,
+            queueOptions: {
+              durable: false,
+            },
+          },
+        }),
+        inject: [ConfigService],
+      },
+      {
+        name: 'MAIL_SERVICE',
+        imports: [ConfigModule],
+        useFactory: () => ({
+          transport: Transport.RMQ,
+          options: {
+            urls: [process.env.RABBITMQ_URL],
+            queue: process.env.RABBITMQ_MAILER_QUEUE,
+            queueOptions: {
+              durable: false,
+            },
+          },
+        }),
+        inject: [ConfigService],
+      },
+      {
+        name: 'TOKEN_SERVICE',
+        imports: [ConfigModule],
+        useFactory: () => ({
+          transport: Transport.RMQ,
+          options: {
+            urls: [process.env.RABBITMQ_URL],
+            queue: process.env.RABBITMQ_TOKEN_QUEUE,
+            queueOptions: {
+              durable: false,
+            },
+          },
+        }),
+        inject: [ConfigService],
+      },
+    ]),
+  ],
+  providers: [CommunityService, S3Service],
+  controllers: [CommunityController],
+})
+export class CommunityModule {}

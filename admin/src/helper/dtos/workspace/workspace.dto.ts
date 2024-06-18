@@ -1,0 +1,23 @@
+import { IsNumber, IsOptional, IsString } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+
+export class CreateWorkspaceDTO {
+  @ApiProperty({ type: 'string' })
+  @IsString()
+  name: string;
+
+  @ApiProperty({ type: 'number', example: 1 })
+  @IsNumber()
+  workspace_type: number;
+
+  @ApiProperty({ type: 'number', example: 1 })
+  @IsNumber()
+  project_id: number;
+
+  @ApiProperty({
+    required: false,
+    type: [Number],
+  })
+  @IsOptional()
+  public workspace_member: number[];
+}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}YOUR REQUEST TO JOIN HAS BE APPROVED!{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0; color: #353434">Dear {{user_name}}!</p>
+		<p></p>
+		<p style="margin: 0; color: #353434">The host has approved your request to join to {{community_name}}.</p>
+		<br/>
+		<!-- /link directed to invation box/ -->
+		<p style="margin: 0; color: #353434">Cheers,</p>
+		<p style="margin: 0; color: #353434">The Hubbers Team</p>
+	</td>
+</tr>
+{% endblock %}

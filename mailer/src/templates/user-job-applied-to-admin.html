@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block title %}Hubbers Applicant for “{{title}}” {% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style=" padding: 20px 30px 0px 30px; 
+				color: #666666; 
+				font-family: 'Lato', Helvetica, Arial, sans-serif; 
+				font-size: 18px; 
+				font-weight: 400; 
+				line-height: 25px; 
+				border-left: 1px solid #eee; 
+				border-right: 1px solid #eee;">
+		<p>Dear <b>Hubbers HR team, </b>we have a new applicant for <a href="https://hubbers.io/hubbers/hubbers-job-board">“{{title}}”</a></p><br/><br/>
+		<p>
+			Name: {{name}}
+		</p>
+		<p>
+			Linkedin: {{linkedinProfileUrl}}
+		</p>
+		<p>
+			Email: {{email}}
+		</p>
+		<p>
+			{{message}}
+		</p>
+	</td>
+</tr>
+{% endblock %}

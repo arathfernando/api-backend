@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+      /* FONTS */
+      @import url(https://fonts.googleapis.com/css?family=Poppins);
+
+      /* CLIENT-SPECIFIC STYLES */
+      body {
+        font-family: Poppins;
+      }
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        margin: 0px 0px 19px;
+      }
+      .text {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: black;
+      }
+      .btn {
+        box-sizing: border-box;
+        display: inline-grid;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 30px;
+        min-width: 213px;
+        width: fit-content;
+        max-width: 100%;
+        height: 38px;
+        background: #8bc53f;
+        border-radius: 4px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        color: #fffafa !important;
+        text-decoration: none;
+      }
+
+      .footer h6 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 16px;
+      }
+      .footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .footer p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        color: #ffffff;
+        margin: 0px;
+      }
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 32px !important;
+          line-height: 32px !important;
+        }
+      }
+
+      /* ANDROID CENTER FIX */
+      div[style*='margin: 16px 0;'] {
+        margin: 0 !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #f0f0f0;
+      margin: 0 !important;
+      padding: 0 !important;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="min-height: 100vh; max-width: 600px; margin: auto"
+    >
+      <!-- LOGO -->
+      <tr>
+        <td align="center">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+            bgcolor="#333"
+          >
+            <tr>
+              <td
+                align="center"
+                valign="top"
+                style="padding: 22px 10px; height: 82px; box-sizing: border-box"
+              >
+                <a href="https://hubbers.io/" target="_blank">
+                  <img
+                    style="height: 30px"
+                    src="https://hubbers-assets.s3.eu-central-1.amazonaws.com/hubbers-logo-for-email-template.svg"
+                  />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#333" align="center"></td>
+      </tr>
+      <tr
+        style="vertical-align: top; background-color: #ffffff; height: 100%"
+        bgcolor="#ffffff"
+      >
+        <td bgcolor="#ffffff" align="center">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+          >
+            <tr>
+              <td bgcolor="#ffffff" align="left" style="padding: 30px 24px 0px">
+                <h3 class="title">A NEW COMMUNITY HAS BEEN CREATED</h3>
+
+                <p style="margin-bottom: 30px" class="text">{{content}}</p>
+
+                <!-- <p align="center" style="padding-bottom: 0px">
+                  <a href="{{link}}" target="_blank" class="btn"
+                    >Join the contest</a
+                  >
+                </p> -->
+              </td>
+            </tr>
+            <tr>
+              <td
+                bgcolor="#fff"
+                align="center"
+                style="padding: 0px 30px; text-align: left"
+              >
+                <p style="margin-bottom: 21px" class="text">Hubberliciously,</p>
+                <p style="margin-bottom: 21px" class="text">Hubbers team</p>
+                <br />
+                <br />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+            bgcolor="#001126"
+          >
+            <tr>
+              <td align="center" style="padding: 26px 10px" class="footer">
+                <h6>
+                  <a href="https://hubbers.io/desk/dashboard/" target="_blank"
+                    >Dashboard</a
+                  >
+                  -
+                  <a href="https://hubbers.io/desk/profile/" target="_blank"
+                    >Profile</a
+                  >
+                  -
+                  <a href="https://help.hubbers.io/" target="_blank">Support</a>
+                </h6>
+                <p>Creatis, 6, avenue d’Archimède</p>
+                <p>02100 Saint-Quentin, France</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

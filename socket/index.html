@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:9005', {
+        query: {
+          authorization:
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImZpcnN0X25hbWUiOiJraHlhdGkiLCJsYXN0X25hbWUiOiJrb3RhZGl5YSIsImVtYWlsIjoia2h5YXRpLmRvdWJsZWRvdHRzQGdtYWlsLmNvbSIsImlhdCI6MTY5NjkzMTkxNywiZXhwIjoxNjk3MDE4MzE3fQ.s3Rcb-qkyqwwWsIpEkgTDTUfoP5KudV13US0QY6E8-E',
+        },
+        secure: true,
+        timeout: 10000,
+      });
+
+      socket.on('connect', function (data) {
+        console.log('connected');
+        // Respond with a message including this clients' id sent from the server
+        socket.emit('update_chat_status', {
+          chatId: [6, 7],
+          seen_unseen: 'SEEN',
+        });
+        socket.emit('message', {
+          conversationId: 13,
+          message: 'test first string',
+        });
+      });
+      socket.on('disconnect', function (data) {
+        console.log('disconnected');
+      });
+      socket.on('message', {
+        conversationId: 1,
+        message: 'test second string',
+      });
+      socket.on('error', console.error.bind(console));
+      socket.on('receive_message', (data) => {
+        console.log('from recive message', data);
+      });
+      socket.on('notification', console.log.bind(console));
+      socket.on('message_notification', console.log.bind(console));
+      socket.on('send_notification', console.log.bind(console));
+      socket.on('update_receive_chat_status', console.log.bind(console));
+      socket.emit('typing', {
+        userId: 319,
+        conversationId: 4,
+        is_typing: 'TRUE',
+      });
+      socket.emit('status', {
+        userId: 1,
+        status: 'ONLINE',
+      });
+      socket.on('typing_status', console.log.bind(console));
+
+      function addMessage(message) {
+        var text = document.createTextNode(message),
+          el = document.createElement('li'),
+          messages = document.getElementById('messages');
+
+        el.appendChild(text);
+        messages.appendChild(el);
+      }
+    </script>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+  </body>
+</html>

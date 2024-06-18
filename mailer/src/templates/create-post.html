@@ -1,0 +1,24 @@
+{% extends 'layout-ckeditor5.html' %}
+{% block title %}A NEW POST IS CREATED{% endblock %}
+
+{% block content %}
+<!-- COPY -->
+<tr>
+	<td bgcolor="#ffffff" align="left"
+		style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
+		<p style="margin: 0; color: #353434">Dear {{user_name}}</p>
+		<p></p>
+		<p style="margin: 0; color: #353434">A new post has been created in {{community_name}} by {{creator}}.</p>
+		<br/>
+		<div class='ck-content' style="height: 95px; overflow: hidden;">{{content |safe}}</div>
+		<!-- <div style="text-align: center;">...</div> -->
+		<br/>
+		<!-- <div style="height: 100px; background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));"></div> -->
+		<!-- <a href="{{link}}">Show more</a> -->
+		<a href="{{link}}" target="_blank" style="background:#75AC2A;width:65%;font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; letter-spacing: 0.05rem; padding: 15px 25px; border-radius: 2px; border-radius: 5px; display: block;text-transform: uppercase;text-align: center;margin: auto;">Show more</a>
+		<!-- /link directed to invation box/ -->
+		<!-- <p style="margin: 0; color: #353434">Cheers,</p>
+		<p style="margin: 0; color: #353434">The Hubbers Team</p> -->
+	</td>
+</tr>
+{% endblock %}

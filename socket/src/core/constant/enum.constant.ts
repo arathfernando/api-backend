@@ -1,0 +1,20 @@
+export enum SEEN_UNSEEN {
+  SEEN = 'SEEN',
+  UNSEEN = 'UNSEEN',
+  DELIVER = 'DELIVER',
+}
+
+export enum CONVERSATION_TYPE {
+  NORMAL = 'NORMAL',
+  MARKET_PLACE = 'MARKET_PLACE',
+}
+
+export enum NOTIFICATION_TYPE {
+  GLOBAL = 'GLOBAL',
+  PERSONAL = 'PERSONAL',
+}
+
+export enum TRUE_FALSE {
+  TRUE = 'TRUE',
+  FALSE = 'FALSE',
+}

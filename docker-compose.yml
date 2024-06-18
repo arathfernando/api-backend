@@ -1,0 +1,217 @@
+version: "3.4"
+
+services:
+  nginx:
+      image: nginx:latest
+      restart: unless-stopped
+      hostname: nginx
+      ports:
+        - 80:80
+      volumes:
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx/conf.d:/etc/nginx/conf.d
+        - ./nginx/ssl:/etc/nginx/ssl
+      depends_on:
+        - admin
+        - community
+        - master-class
+        - payment
+        - product-launcher
+        - socket
+        - transaction
+        - user
+
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: admin
+    ports:
+      - 9004:9004
+    env_file:
+      - ./admin/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./admin:/var/www/admin
+      - /var/www/admin/node_modules
+
+  community:
+    build:
+      context: ./community
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: community
+    ports:
+      - 9003:9003
+    env_file:
+      - ./community/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./community:/var/www/community
+      - /var/www/community/node_modules
+
+  master-class:
+    build:
+      context: ./master-class
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: master-class
+    ports:
+      - 9006:9006
+    env_file:
+      - ./master-class/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./master-class:/var/www/master-class
+      - /var/www/master-class/node_modules
+  
+  payment:
+    build:
+      context: ./payment
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: payment
+    ports:
+      - 9008:9008
+    env_file:
+      - ./payment/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./payment:/var/www/payment
+      - /var/www/payment/node_modules
+
+  product-launcher:
+    build:
+      context: ./product-launcher
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: product-launcher
+    ports:
+      - 9007:9007
+    env_file:
+      - ./product-launcher/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./product-launcher:/var/www/product-launcher
+      - /var/www/product-launcher/node_modules
+
+  socket:
+    build:
+      context: ./socket
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: socket
+    ports:
+      - 9005:9005
+    env_file:
+      - ./socket/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672, redis:6379
+    volumes:
+      - ./socket:/var/www/socket
+      - /var/www/socket/node_modules
+  
+  transaction:
+    build:
+      context: ./transaction
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: transaction
+    ports:
+      - 9002:9002
+    env_file:
+      - ./transaction/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./transaction:/var/www/transaction
+      - /var/www/transaction/node_modules 
+
+  user:
+    build:
+      context: ./user
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: user
+    ports:
+      - 9001:9001
+    env_file:
+      - ./user/.env
+    environment:
+      WAIT_HOSTS: postgres:5432, rabbitmq:5672
+    volumes:
+      - ./user:/var/www/user
+      - /var/www/user/node_modules
+  
+  token:
+    build:
+      context: ./token
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: token
+    environment:
+      WAIT_HOSTS: rabbitmq:5672
+    env_file:
+      - ./token/.env
+  
+  mailer:
+    build:
+      context: ./mailer
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    hostname: mailer
+    environment:
+      WAIT_HOSTS: rabbitmq:5672, redis:6379
+    env_file:
+      - ./mailer/.env
+    volumes:
+      - ./mailer:/var/www/mailer
+      - /var/www/mailer/node_modules
+  
+  database:
+    image: postgres:latest
+    restart: on-failure
+    container_name: postgres
+    hostname: database
+    ports:
+      - "5432:5432"
+    environment:
+      PG_DATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_USER: "postgres"
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_PASSWORD: Abcd123
+      POSTGRES_DB: "hubbers"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+  
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    restart: on-failure
+    container_name: rabbitmq
+    hostname: rabbitmq
+    volumes:
+      - rabbit_data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  
+  redis:
+    image: redis:latest
+    restart: on-failure
+    container_name: redis
+    hostname: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  pg_data:
+  rabbit_data:
+  redis_data:
